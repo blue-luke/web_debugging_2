@@ -10,8 +10,6 @@ class StruggleTableFlipperApp < Sinatra::Base
   end
 
   post "/flipped_struggle" do
-    p "Params are below"
-    p params[:the_struggle]
     @flipped_struggle = StruggleTableFlipper.new(params[:struggle]).flipped_struggle
     erb :flipped_struggle
   end
